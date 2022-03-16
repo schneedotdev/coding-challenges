@@ -10,11 +10,26 @@
 // }
 
 // FizzBuzz
+// const fizzBuzz = n => {
+//     for (let i = 1; i <= n; i++) {
+//         console.log((((i % 3 === 0) ? 'fizz' : '') + ((i % 5 === 0) ? 'buzz' : '')) || i);
+//     }
+// }
 
-const fizzBuzz = n => {
-    for (let i = 1; i <= n; i++) {
-        console.log((((i % 3 === 0) ? 'fizz' : '') + ((i % 5 === 0) ? 'buzz' : '')) || i);
+// fizzBuzz(15);
+
+// Chessboard
+let str = '';
+
+for (let i = 0; i < 8; i++) {
+    for (let j = 0; j < 8; j++) {
+        if((i + j) % 2 === 0) {
+            str += '#'
+        } else {
+            str += ' '
+        }
     }
+    str += '\n'
 }
 
-fizzBuzz(15);
+console.log(str);
