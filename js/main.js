@@ -8,3 +8,4 @@
   */
 
 const digitize = n => String(n).split('').reverse().map(e => Number(e))
+
