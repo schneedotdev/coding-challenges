@@ -58,3 +58,28 @@ const sumArray = (array) => {
  */
 
 const betterThanAverage = (classPoints, yourPoints) => yourPoints > (classPoints.reduce((prev, current) => prev + current) / classPoints.length)
+
+/**
+ * Name: Needle in the Haystack
+ * Description: Can you find the needle in the haystack? Write a function findNeedle() that takes an array full of junk but containing one "needle." After your function finds the needle it should return a message (as a string) that says: "found the needle at position " plus the index it found the needle, so:
+ */
+
+const findNeedle = haystack => 'found the needle at position ' + haystack.indexOf('needle')
+
+/**
+ * Name: USD => CNY
+ * Description: Create a function that converts US dollars (USD) to Chinese Yuan (CNY) . The input is the amount of USD as an integer, and the output should be a string that states the amount of Yuan followed by 'Chinese Yuan'
+ */
+
+function usdcny(usd) {
+  return `${(usd * 6.75).toFixed(2)} Chinese Yuan`
+}
+
+/**
+ * Name: Grasshopper - Personalized Message
+ * Description: Create a function that gives a personalized greeting. This function takes two parameters: name and owner. If name is the same as owner, return 'Hello boss'
+ */
+
+function greet(name, owner) {
+  return (name === owner) ? 'Hello boss' : 'Hello guest';
+}
