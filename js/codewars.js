@@ -122,3 +122,12 @@ function battle(x, y) {
 }
 
 battle.alphabet = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
+
+/**
+ * Name: 
+ * Description: 
+ */
+
+function filter_list(l) {
+  return l.filter(item => typeof item === 'number')
+}
