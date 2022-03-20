@@ -33,3 +33,23 @@ console.log(sum)
 const values = [3, 11, 7, 2, 9, 10];
 
 console.log(Math.max(...values))
+
+// List of words
+
+const arr = []
+let input = prompt('Continue entering values. To stop entering values, type "stop"');
+
+arr.push(input);
+
+while (input !== 'stop') {
+    input = prompt('Continue entering values. To stop entering values, type "stop"')
+    arr.push(input)
+}
+
+if (arr.length > 1) {
+    for (let i = 0; i < arr.length - 1; i++) {
+        console.log(arr[i])
+    }
+} else {
+    console.log('only stop was input')
+}
