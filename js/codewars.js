@@ -165,10 +165,28 @@ function gooseFilter(birds) {
  * Description: Given an array of integers, remove the smallest value. Do not mutate the original array/list. If there are multiple elements with the same value, remove the one with a lower index. If you get an empty array/list, return an empty array/list.
  */
 
+// function removeSmallest(numbers) {
+//   let min = Math.min(...numbers);
+
+//   numbers.splice(numbers.indexOf(min), 1);
+
+//   return numbers;
+// }
+
 function removeSmallest(numbers) {
   let min = Math.min(...numbers);
+  let numsCopy = numbers;
 
-  numbers.splice(numbers.indexOf(min), 1);
+  numsCopy.splice(numbers.indexOf(min), 1);
 
-  return numbers;
+  return numsCopy;
 }
+
+/**
+ * Name: Sort Numbers
+ * Description: Finish the solution so that it sorts the passed in array of numbers. If the function passes in an empty array or null/nil value then it should return an empty array.
+ */
+
+const solution = nums => nums !== null ? nums.sort((a, b) => a - b) : [];
+
+
