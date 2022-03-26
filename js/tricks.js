@@ -11,3 +11,10 @@ console.log(str * 1)
 let num = 25
 
 console.log(num + "")
+
+
+// arrow function with no params
+
+const doSomething = () => console.log('something');
+
+const doSomething = _ => console.log('something');
