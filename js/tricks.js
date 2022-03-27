@@ -24,3 +24,5 @@ const doSomething = _ => console.log('something');
 let arr = [100, 200, 300]
 
 let [a, b, c] = arr;
+
+console.log(b)
