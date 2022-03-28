@@ -240,3 +240,37 @@ function capitalize(s) {
 
 const minValue = values => Number([...new Set(values)].sort().join(''));
 
+/**
+ * Name: 
+ * Description: 
+ */
+
+function dotCalculator(equation) {
+  let arr = [0, undefined, 0, 0]
+  let [a, operator, b, result] = arr;
+
+  for (let char of equation) {
+    if (char === '.')
+      operator ? a++ : b++
+    else if (char !== ' ')
+      operator = char
+  }
+
+  switch (operator) {
+    case ('+'):
+      result = b + a;
+      break;
+    case ('-'):
+      result = b - a;
+      break;
+    case ('*'):
+      result = b * a;
+      break;
+    case ('/'):
+      result = b / a;
+      break;
+    case (undefined):
+      result = a;
+      break;
+  }
+}
