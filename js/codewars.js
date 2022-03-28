@@ -241,7 +241,8 @@ function capitalize(s) {
 const minValue = values => Number([...new Set(values)].sort().join(''));
 
 /**
- * Name: 
+ * IN PROGRESS
+ * Name: Dot Calculator
  * Description: 
  */
 
@@ -273,4 +274,15 @@ function dotCalculator(equation) {
       result = a;
       break;
   }
+
+  const resultArr = []
+
+  for (let i = 0; i < result; i++) {
+    resultArr.push('.')
+  }
+
+  console.log('a: ', a, 'b: ', b)
+  console.log('result: ', resultArr.join(''))
+
+  return resultArr.join('');
 }
