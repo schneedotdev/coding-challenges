@@ -60,3 +60,38 @@ this.draw = function() {
 Circle.call({}, 1) // exactly like const another = new Circle(1); "this" references the empty object passed as the first argument
 
 Circle.apply({}, [1, 2, 3]); 
+
+
+// ** Types: Value (Primative) vs. Reference Types
+
+let x = 10; // stored inside x
+let y = x; // value is copied into the new variable (completely independent)
+
+x = 20;
+
+
+let a = { value: 10 }; // the value is not stored inside a, the address of the object is
+let b = a; // when we copy a into b, its the address/reference that is copied, not the value
+
+a.value = 20; // b will show 20
+
+
+// ** example of copy by value vs reference
+
+let number = 10;
+
+function increase(number) {
+    number++
+}
+
+increase(number);
+console.log(number) // prints 10, because the number referenced in the increase function is local to the function
+
+let number2 = { value: 10 };
+
+function increase2(obj) {
+    obj.value++;
+}
+
+increase(obj);
+console.log(obj); // the objects value will be 11 because the increase2 function has a reference to the address of the object defined by number2
