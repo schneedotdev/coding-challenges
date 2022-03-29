@@ -156,27 +156,31 @@ circle.defaultLocation = 1;
 
 function Stopwatch() {
     let startTime, endTime, duration = 0;
+    let running = false;
 
     this.start = function() {
-        if(startTime)
+        if(running)
             throw new Error('Stopwatch has already started.')
 
         startTime= new Date();
+        running = true;
     }
 
     this.stop = function() {
-        if (endTime)
+        if (!running)
             throw new Error('Stopwatch has already been stopped.')
 
-        endTime = new Date();
+        running = false;
 
+        endTime = new Date();
         const seconds = (endTime.getTime() - startTime.getTime()) / 1000;
         duration += seconds;
     }
 
     this.reset = function() {
-        startTime = 0;
-        endTime = 0; 
+        startTime = null;
+        endTime = null;
+        running = false;
         duration = 0;
     }
 
