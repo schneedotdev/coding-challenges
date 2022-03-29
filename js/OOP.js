@@ -95,3 +95,44 @@ function increase2(obj) {
 
 increase(obj);
 console.log(obj); // the objects value will be 11 because the increase2 function has a reference to the address of the object defined by number2
+
+
+// ** Objects are dynamic, meaning we can add properties at any time
+
+
+let circle3 = new Circle(10)
+circle3.location = { x: 1}
+
+// ** Accessing the keys of an object
+
+for (let key in circle3) {
+    if(typeof circle[key] !== 'function')
+        console.log(key, circle[key])
+}
+
+const keys = Object.keys(circle3);
+console.log(keys);
+
+if('radius' in circle3)
+    console.log('Circle has a radius property')
+
+
+
+// ** Abstraction - hiding certain members from being accessed from outside of the function
+
+function Rectangle(length, width) {
+    let color = 'red'; // local variable, cant be accessed from outside
+    let defaultLocation = { x: 0, y: 0 };
+    let computeOptimalLocation = function(factor) {
+        // ...
+    }
+
+    this.length = length,
+    this.width = width,
+
+    this.draw = function() {
+        computeOptimalLocation(0.1);
+
+        console.log('drawing rectangle')
+    }
+}
