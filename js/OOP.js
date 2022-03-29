@@ -135,4 +135,56 @@ function Rectangle(length, width) {
 
         console.log('drawing rectangle')
     }
+    
+    Object.defineProperty(this, 'defaultLocation', {
+        get: function() {
+            return defaultLocation;
+        },
+        set: function(value) {
+            if(!value.x || !value.y)
+                throw new Error('Invalid Location');
+
+            defaultLocation = value;
+        }
+    });
 }
+
+circle.defaultLocation;
+circle.defaultLocation = 1;
+
+// ** Creating my own stopwatch
+
+function Stopwatch() {
+    let startTime, endTime, duration = 0;
+
+    this.start = function() {
+        if(startTime)
+            throw new Error('Stopwatch has already started.')
+
+        startTime= new Date();
+    }
+
+    this.stop = function() {
+        if (endTime)
+            throw new Error('Stopwatch has already been stopped.')
+
+        endTime = new Date();
+
+        const seconds = (endTime.getTime() - startTime.getTime()) / 1000;
+        duration += seconds;
+    }
+
+    this.reset = function() {
+        startTime = 0;
+        endTime = 0; 
+        duration = 0;
+    }
+
+    Object.defineProperty(this, 'duration', {
+        get: function() {
+            return duration;
+        }
+    });
+}
+
+const sw = new Stopwatch();
