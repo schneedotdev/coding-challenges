@@ -343,6 +343,20 @@ if (lastIndex % 2 !== 0) {
   console.log(sorted[index])
 }
 
+// reduce method but with an object as the default value with mean and median properties
+input
+  .sort((a, b) => a - b)
+  .reduce((accumulator, currentValue, index, array) => {
+
+    accumulator.mean += currentValue / array.length;
+
+    if (Math.abs(index + 1 - array.length / 2) < 1) {
+      accumulator.median = currentValue
+    }
+
+    return accumulator;
+  }, { mean: 0, median: 0 });
+
 
 /**
  * IN PROGRESS
