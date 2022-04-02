@@ -306,6 +306,21 @@ const zeroFuel = (distanceToPump, mpg, fuelLeft) => !(distanceToPump - (mpg * fu
 
 const oddCount = n => Math.floor(n / 2)
 
+/**
+ * Name: Is the date today
+ * Description: Write a simple function that takes a Date as a parameter and returns a Boolean representing whether the date is today or not. Make sure that your function does not return a false positive by only checking the day.
+
+ */
+
+
+const isToday = date => {
+  let today = new Date();
+  if (today.getDate() === date.getDate() && today.getYear() === date.getYear() && today.getMonth() === date.getMonth())
+    return true;
+  else
+    return false;
+}
+
 
 /**
  * IN PROGRESS
