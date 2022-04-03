@@ -357,50 +357,47 @@ input
     return accumulator;
   }, { mean: 0, median: 0 });
 
-
 /**
- * IN PROGRESS
- * Name: Dot Calculator
- * Description: 
+ * Name: Beginner - Lost Without a Map
+ * Description: Given an array of integers, return a new array with each value doubled.
  */
 
-function dotCalculator(equation) {
-  let arr = [0, undefined, 0, 0]
-  let [a, operator, b, result] = arr;
+const maps = x => x.map(num => num + num)
 
-  for (let char of equation) {
-    if (char === '.')
-      operator ? a++ : b++
-    else if (char !== ' ')
-      operator = char
-  }
 
-  switch (operator) {
-    case ('+'):
-      result = b + a;
-      break;
-    case ('-'):
-      result = b - a;
-      break;
-    case ('*'):
-      result = b * a;
-      break;
-    case ('/'):
-      result = b / a;
-      break;
-    case (undefined):
-      result = a;
-      break;
-  }
 
-  const resultArr = []
 
-  for (let i = 0; i < result; i++) {
-    resultArr.push('.')
-  }
 
-  console.log('a: ', a, 'b: ', b)
-  console.log('result: ', resultArr.join(''))
 
-  return resultArr.join('');
+/**
+ * Name: Dot Calculator
+ * Description: You'll have to return a string that contains dots, as many the equation returns. If the result is 0, return the empty string. When it comes to subtraction, the first number will always be greater than or equal to the second number.
+ * "..... + ..............." => "...................."
+ * "..... - ..."             => ".."
+ * "..... - ."               => "...."
+ * "..... * ..."             => "..............."
+ * "..... * .."              => ".........."
+ * "..... // .."             => ".."
+ * "..... // ."              => "....."
+ * ". // .."                 => ""
+ * ".. - .."                 => ""
+ * 
+ */
+
+const dotCalculator = equation => {
+  let [a, operator, b] = equation.split(' ');
+
+  a = a.length;
+  b = b.length;
+
+  let result = operation[operator](a, b);
+
+  return '.'.repeat(result);
+}
+
+let operation = {
+  '+': function (a, b) { return a + b },
+  '-': function (a, b) { return a - b },
+  '*': function (a, b) { return a * b },
+  '//': function (a, b) { return Math.floor(a / b) }
 }
