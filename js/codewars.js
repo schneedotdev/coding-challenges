@@ -4,7 +4,7 @@
 
 
  /**
-  * Name: 
+  * Name: Digitize
   * Description: Given a random non-negative number, you have to return the digits of this number within an array in reverse order.
   */
 
@@ -364,11 +364,6 @@ input
 
 const maps = x => x.map(num => num + num)
 
-
-
-
-
-
 /**
  * Name: Dot Calculator
  * Description: You'll have to return a string that contains dots, as many the equation returns. If the result is 0, return the empty string. When it comes to subtraction, the first number will always be greater than or equal to the second number.
@@ -384,7 +379,7 @@ const maps = x => x.map(num => num + num)
  * 
  */
 
-const dotCalculator = equation => {
+function dotCalculator(equation) {
   let [a, operator, b] = equation.split(' ');
 
   a = a.length;
@@ -401,3 +396,21 @@ let operation = {
   '*': function (a, b) { return a * b },
   '//': function (a, b) { return Math.floor(a / b) }
 }
+
+/**
+ * Name: Return the closest number multiple of 10
+ * Description: Given a number return the closest number to it that is divisible by 10.
+ */
+
+const closestMultiple10 = num => {
+  let integer = ~~num
+  let lastDigit = ~~(integer + '').slice(-1)
+
+  if (lastDigit < 5) {
+    integer -= lastDigit;
+  } else {
+    integer += (10 - lastDigit)
+  }
+
+  return integer;
+};
