@@ -1,12 +1,12 @@
 /**
- * This file will contain JS problems
+ * This file will contain CodeWars problems of 8 kyu difficulty
  */
 
 
- /**
-  * Name: Digitize
-  * Description: Given a random non-negative number, you have to return the digits of this number within an array in reverse order.
-  */
+/**
+ * Name: Digitize
+ * Description: Given a random non-negative number, you have to return the digits of this number within an array in reverse order.
+ */
 
 const digitize = n => String(n).split('').reverse().map(e => Number(e))
 
@@ -25,30 +25,30 @@ const removeChar = str => str.substring(1, str.length - 1);
  */
 
 const sumArray = (array) => {
-  if ((array !== undefined && array !== null) && array.length > 2) {
-    let low = 0;
-    let high = 0;
-    let sum = 0;
+    if ((array !== undefined && array !== null) && array.length > 2) {
+        let low = 0;
+        let high = 0;
+        let sum = 0;
 
-    for (let i = 1; i < array.length; i++) {
-      if (array[i] < array[low]) {
-        low = i;
-      }
+        for (let i = 1; i < array.length; i++) {
+            if (array[i] < array[low]) {
+                low = i;
+            }
 
-      if (array[i] > array[high]) {
-        high = i;
-      }
+            if (array[i] > array[high]) {
+                high = i;
+            }
+        }
+
+        array.forEach((x, i) => {
+            if (!(i === low || i === high)) {
+                sum += x;
+            }
+        });
+        return sum;
     }
 
-    array.forEach((x, i) => {
-      if (!(i === low || i === high)) {
-        sum += x;
-      }
-    });
-    return sum;
-  }
-
-  return 0;
+    return 0;
 }
 
 
@@ -72,7 +72,7 @@ const findNeedle = haystack => 'found the needle at position ' + haystack.indexO
  */
 
 function usdcny(usd) {
-  return `${(usd * 6.75).toFixed(2)} Chinese Yuan`
+    return `${(usd * 6.75).toFixed(2)} Chinese Yuan`
 }
 
 /**
@@ -81,7 +81,7 @@ function usdcny(usd) {
  */
 
 function greet(name, owner) {
-  return (name === owner) ? 'Hello boss' : 'Hello guest';
+    return (name === owner) ? 'Hello boss' : 'Hello guest';
 }
 
 /**
@@ -90,38 +90,24 @@ function greet(name, owner) {
  */
 
 function DNAStrand(dna) {
-  return dna.split('').map(x => {
-    switch (x) {
-      case 'A':
-        x = 'T';
-        break;
-      case 'T':
-        x = 'A';
-        break;
-      case 'G':
-        x = 'C';
-        break;
-      case 'C':
-        x = 'G';
-        break;
-    }
-    return x;
-  }).join('');
+    return dna.split('').map(x => {
+        switch (x) {
+            case 'A':
+                x = 'T';
+                break;
+            case 'T':
+                x = 'A';
+                break;
+            case 'G':
+                x = 'C';
+                break;
+            case 'C':
+                x = 'G';
+                break;
+        }
+        return x;
+    }).join('');
 }
-
-/**
- * Name: Battle of the Characters
- * Description: Groups of characters decided to make a battle. Help them to figure out which group is more powerful. Create a function that will accept 2 variables and return the one who's stronger. Each character have its own power: A = 1, B = 2, ... Y = 25, Z = 26
- */
-
-function battle(x, y) {
-  let xVal = x.split('').map(x => battle.alphabet.indexOf(x) + 1).reduce((prev, current) => prev += current)
-  let yVal = y.split('').map(y => battle.alphabet.indexOf(y) + 1).reduce((prev, current) => prev += current)
-
-  return xVal === yVal ? 'Tie!' : xVal > yVal ? x : y
-}
-
-battle.alphabet = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
 
 /**
  * Name: List Filtering
@@ -129,7 +115,7 @@ battle.alphabet = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', '
  */
 
 function filter_list(l) {
-  return l.filter(item => typeof item === 'number')
+    return l.filter(item => typeof item === 'number')
 }
 
 /**
@@ -144,9 +130,9 @@ function filter_list(l) {
  */
 
 function pillars(num_pill, dist, width) {
-  if (num_pill < 2) return 0
+    if (num_pill < 2) return 0
 
-  return ((num_pill - 2) * width) + ((num_pill - 1) * (dist * 100))
+    return ((num_pill - 2) * width) + ((num_pill - 1) * (dist * 100))
 }
 
 /**
@@ -155,9 +141,9 @@ function pillars(num_pill, dist, width) {
  */
 
 function gooseFilter(birds) {
-  var geese = ["African", "Roman Tufted", "Toulouse", "Pilgrim", "Steinbacher"];
+    var geese = ["African", "Roman Tufted", "Toulouse", "Pilgrim", "Steinbacher"];
 
-  return birds.filter(bird => !geese.includes(bird));
+    return birds.filter(bird => !geese.includes(bird));
 };
 
 /**
@@ -174,12 +160,12 @@ function gooseFilter(birds) {
 // }
 
 function removeSmallest(numbers) {
-  let min = Math.min(...numbers);
-  let numsCopy = numbers;
+    let min = Math.min(...numbers);
+    let numsCopy = numbers;
 
-  numsCopy.splice(numbers.indexOf(min), 1);
+    numsCopy.splice(numbers.indexOf(min), 1);
 
-  return numsCopy;
+    return numsCopy;
 }
 
 /**
@@ -196,8 +182,8 @@ const solution = nums => nums !== null ? nums.sort((a, b) => a - b) : [];
 
 
 function sumDigits(number) {
-  let str = String(Math.abs(number))
-  return Number(str.split('').reduce((a, b) => Number(a) + Number(b)))
+    let str = String(Math.abs(number))
+    return Number(str.split('').reduce((a, b) => Number(a) + Number(b)))
 }
 
 /**
@@ -206,9 +192,9 @@ function sumDigits(number) {
  */
 
 function mergeArrays(arr1, arr2) {
-  let mergedNums = arr1.concat(arr2);
-  let uniqueNums = [...new Set(mergedNums)];
-  return uniqueNums.sort((a, b) => a - b);
+    let mergedNums = arr1.concat(arr2);
+    let uniqueNums = [...new Set(mergedNums)];
+    return uniqueNums.sort((a, b) => a - b);
 }
 
 /**
@@ -217,20 +203,20 @@ function mergeArrays(arr1, arr2) {
  */
 
 function capitalize(s) {
-  let arr1 = [];
-  let arr2 = [];
+    let arr1 = [];
+    let arr2 = [];
 
-  s.split('').forEach((char, i) => {
-    if (i % 2 === 0) {
-      arr1.push(char.toUpperCase());
-      arr2.push(char.toLowerCase());
-    } else {
-      arr2.push(char.toUpperCase());
-      arr1.push(char.toLowerCase());
-    }
-  });
+    s.split('').forEach((char, i) => {
+        if (i % 2 === 0) {
+            arr1.push(char.toUpperCase());
+            arr2.push(char.toLowerCase());
+        } else {
+            arr2.push(char.toUpperCase());
+            arr1.push(char.toLowerCase());
+        }
+    });
 
-  return [arr1.join(''), arr2.join('')];
+    return [arr1.join(''), arr2.join('')];
 };
 
 /**
@@ -248,12 +234,12 @@ const minValue = values => Number([...new Set(values)].sort().join(''));
  */
 
 var countSheep = function (num) {
-  let sheep = ''
-  for (let i = 1; i <= num; i++) {
-    sheep += `${i} sheep...`;
-  }
+    let sheep = ''
+    for (let i = 1; i <= num; i++) {
+        sheep += `${i} sheep...`;
+    }
 
-  return sheep
+    return sheep
 }
 
 /**
@@ -276,12 +262,12 @@ const dBScale = intensity => 10 * Math.log10(intensity / 10 ** -12)
  */
 
 function firstNonConsecutive(arr) {
-  for (let i = 0; i < arr.length - 1; i++) {
-    if (arr[i] + 1 !== arr[i + 1])
-      return arr[i + 1]
-  }
+    for (let i = 0; i < arr.length - 1; i++) {
+        if (arr[i] + 1 !== arr[i + 1])
+            return arr[i + 1]
+    }
 
-  return null;
+    return null;
 }
 
 /**
@@ -313,8 +299,8 @@ const oddCount = n => Math.floor(n / 2)
 
 
 const isToday = date => {
-  let today = new Date();
-  return today.getDate() === date.getDate() && today.getYear() === date.getYear() && today.getMonth() === date.getMonth()
+    let today = new Date();
+    return today.getDate() === date.getDate() && today.getYear() === date.getYear() && today.getMonth() === date.getMonth()
 }
 
 
@@ -325,38 +311,6 @@ const isToday = date => {
 
 const fakeBin = x => x.split('').map(char => char < 5 ? 0 : 1).join('');
 
-
-
-/**
- * Name: mean and median
- * Description: find the mean and median of an input of that has an unspecified amount of elements
- */
-const input = [12, 32, 46, 64, 8, 8];
-const sorted = input.sort((a, b) => a - b);
-
-let lastIndex = sorted.length - 1;
-let index = lastIndex / 2
-
-if (lastIndex % 2 !== 0) {
-  console.log(sorted[Math.floor(index)])
-} else {
-  console.log(sorted[index])
-}
-
-// reduce method but with an object as the default value with mean and median properties
-input
-  .sort((a, b) => a - b)
-  .reduce((accumulator, currentValue, index, array) => {
-
-    accumulator.mean += currentValue / array.length;
-
-    if (Math.abs(index + 1 - array.length / 2) < 1) {
-      accumulator.median = currentValue
-    }
-
-    return accumulator;
-  }, { mean: 0, median: 0 });
-
 /**
  * Name: Beginner - Lost Without a Map
  * Description: Given an array of integers, return a new array with each value doubled.
@@ -365,54 +319,21 @@ input
 const maps = x => x.map(num => num + num)
 
 /**
- * Name: Dot Calculator
- * Description: You'll have to return a string that contains dots, as many the equation returns. If the result is 0, return the empty string. When it comes to subtraction, the first number will always be greater than or equal to the second number.
- * "..... + ..............." => "...................."
- * "..... - ..."             => ".."
- * "..... - ."               => "...."
- * "..... * ..."             => "..............."
- * "..... * .."              => ".........."
- * "..... // .."             => ".."
- * "..... // ."              => "....."
- * ". // .."                 => ""
- * ".. - .."                 => ""
- * 
- */
-
-function dotCalculator(equation) {
-  let [a, operator, b] = equation.split(' ');
-
-  a = a.length;
-  b = b.length;
-
-  let result = operation[operator](a, b);
-
-  return '.'.repeat(result);
-}
-
-let operation = {
-  '+': function (a, b) { return a + b },
-  '-': function (a, b) { return a - b },
-  '*': function (a, b) { return a * b },
-  '//': function (a, b) { return Math.floor(a / b) }
-}
-
-/**
  * Name: Return the closest number multiple of 10
  * Description: Given a number return the closest number to it that is divisible by 10.
  */
 
 const closestMultiple10 = num => {
-  let integer = ~~num
-  let lastDigit = ~~(integer + '').slice(-1)
+    let integer = ~~num
+    let lastDigit = ~~(integer + '').slice(-1)
 
-  if (lastDigit < 5) {
-    integer -= lastDigit;
-  } else {
-    integer += (10 - lastDigit)
-  }
+    if (lastDigit < 5) {
+        integer -= lastDigit;
+    } else {
+        integer += (10 - lastDigit)
+    }
 
-  return integer;
+    return integer;
 };
 
 
@@ -439,94 +360,18 @@ const findShort = s => s.split(' ').reduce((a, b) => b.length < a.length ? b : a
 const repeater = (string, n) => string.repeat(n)
 
 /**
- * Name: Alphabet war
- * Description: Write a function that accepts fight string consists of only small letters and return who wins the fight. When the left side wins return Left side wins!, when the right side wins return Right side wins!, in other case return Let's fight again!.
- */
-
-function alphabetWar(fight) {
-  const letters = {
-    's': function () { this.left++ },
-    'b': function () { this.left += 2 },
-    'p': function () { this.left += 3 },
-    'w': function () { this.left += 4 },
-    'z': function () { this.right++ },
-    'd': function () { this.right += 2 },
-    'q': function () { this.right += 3 },
-    'm': function () { this.right += 4 },
-    left: 0,
-    right: 0
-  }
-
-  fight.split('').forEach(letter => {
-    if (letter in letters)
-      letters[letter]()
-  })
-
-  if (letters.left > letters.right)
-    return "Left side wins!"
-  else if (letters.left < letters.right)
-    return "Right side wins!"
-  else
-    return "Let's fight again!"
-}
-
-/**
  * Name: How many pages in a book?
  * Description: Every book has n pages with page numbers 1 to n. The summary is made by adding up the number of digits of all page numbers. Task: Given the summary, find the number of pages n the book has. If the input is summary=25, then the output must be n=17: The numbers 1 to 17 have 25 digits in total: 1234567891011121314151617.
  */
 
 function amountOfPages(summary) {
-  let nums = [];
-  let str = '';
+    let nums = [];
+    let str = '';
 
-  while (str.length !== summary) {
-    str += nums.length + 1;
-    nums.push(nums.length + 1);
-  }
-
-  return nums[nums.length - 1];
-}
-
-/**
- * Name: Jaden Casing Strings
- * Description: Your task is to convert strings to how they would be written by Jaden Smith. The strings are actual quotes from Jaden Smith, but they are not capitalized in the same way he originally typed them.
- */
-
-String.prototype.toJadenCase = function () {
-  return this.split(' ').map(word => {
-    const firstLetter = word[0]
-    return word.replace(firstLetter, firstLetter.toUpperCase())
-  }).join(' ')
-};
-
-
-
-
-
-
-
-
-
-/** IN PROGRESS
- * Name: Title Case
- * Description: Write a function that will convert a string into title case, given an optional list of exceptions (minor words). The list of minor words will be given as a string with each word separated by a space. Your function should ignore the case of the minor words string -- it should behave in the same way even if the case of the minor word string is changed.
- */
-
-function titleCase(title) {
-  let arr = title.split(' ')
-  let words = ['a', 'and', 'in', 'the']
-
-  arr = arr.map((word, i) => {
-    word = word.toLowerCase();
-
-    if (i === 0 || !words.includes(word)) {
-      const c = word.charAt(0)
-      word = word.replace(c, c.toUpperCase())
+    while (str.length !== summary) {
+        str += nums.length + 1;
+        nums.push(nums.length + 1);
     }
 
-
-    return word
-  })
-
-  return arr.join(' ');
+    return nums[nums.length - 1];
 }
