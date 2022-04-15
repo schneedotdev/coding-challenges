@@ -85,5 +85,5 @@ function dataReverse(data) {
   while (data.length)
     data_copy.push(data.splice(0, 8).reverse());
 
-  return [].concat.apply([], data_copy);
+  return [].concat.apply([], data_copy); // data_copy.flat(1) <-- 1 defines the depth
 }

@@ -11,6 +11,13 @@
 const digitize = n => String(n).split('').reverse().map(e => Number(e))
 
 
+// Write a function "greet" that returns "hello world!"
+const greet = _ => 'hello world!'
+
+// convert num to string
+
+const numberToString = num => num + ''
+
 /**
  * Name: Remove First and Last Character
  * Description: It's pretty straightforward. Your goal is to create a function that removes the first and last characters of a string. You're given one parameter, the original string. You don't have to worry with strings with less than two characters.
@@ -374,4 +381,14 @@ function amountOfPages(summary) {
     }
 
     return nums[nums.length - 1];
+}
+
+/**
+ * Name: How good are you really?
+ * Description: There was a test in your class and you passed it. Congratulations!
+But you're an ambitious person. You want to know if you're better than the average student in your class.
+ */
+
+function betterThanAverage(classPoints, yourPoints) {
+    return (classPoints.reduce((acc, cur) => acc + cur, 0) / classPoints.length) < yourPoints
 }
