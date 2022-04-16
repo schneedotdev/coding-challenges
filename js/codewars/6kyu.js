@@ -106,3 +106,4 @@ function solution(number) {
 
   return [...new Set(arr)].reduce((a, b) => a + b, 0);
 }
+
