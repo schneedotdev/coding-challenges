@@ -392,3 +392,19 @@ But you're an ambitious person. You want to know if you're better than the avera
 function betterThanAverage(classPoints, yourPoints) {
     return (classPoints.reduce((acc, cur) => acc + cur, 0) / classPoints.length) < yourPoints
 }
+
+
+
+/**
+ * Name: String to Number
+ */
+
+var stringToNumber = str => ~~str
+
+
+/**
+ * Name: Counting Sheep 2
+ * Description: Track the amount of "trues" that appear in an array
+ */
+
+const countSheeps = arrayOfSheep => arrayOfSheep.filter(sheep => sheep).length;

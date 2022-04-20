@@ -107,3 +107,27 @@ function solution(number) {
   return [...new Set(arr)].reduce((a, b) => a + b, 0);
 }
 
+
+
+
+/**
+ * Name: Your order, please
+ * Description: Your task is to sort a given string. Each word in the string will contain a single number. This number is the position the word should have in the result.
+ * Note: Numbers can be from 1 to 9. So 1 will be the first word (not 0).
+ * If the input string is empty, return an empty string. The words in the input String will only contain valid consecutive numbers.
+ */
+
+// function order(words) {
+//   const nums = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+//   let found = []
+
+//   return words === '' ? words : words.split(' ').map((word, j) => {
+//     return word.split('').map((char, i) => {
+//       if (char in nums) {
+//         found.push(char)
+//         // return '' <--- include this to remove numbers from the string
+//       }
+//       return char;
+//     }).join('');
+//   }).map((word, i) => found[i] + word).sort().map(word => word.substring(1)).join(' ');
+// }
