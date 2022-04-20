@@ -176,3 +176,29 @@ function unusedDigits(...nums) {
  */
 
 const squareDigits = num => Number((num + '').split('').map(e => (~~e) ** 2).join(''))
+
+/**
+ * Name: Categorize New Croquet Member
+ * Description: To be a senior, a member must be at least 55 years old and have a handicap greater than 7. In this croquet club, handicaps range from -2 to +26; the better the player the lower the handicap.
+ */
+
+function openOrSenior(data) {
+    return data.map(e => (e[0] > 54 && e[1] > 7) ? 'Senior' : 'Open')
+}
+
+/**
+ * Name: Find the next perfect square!
+ * Description:  Complete the findNextSquare method that finds the next integral perfect square after the one passed as a parameter. Recall that an integral perfect square is an integer n such that sqrt(n) is also an integer.
+ */
+
+function findNextSquare(sq) {
+    if (Math.sqrt(sq) % 1 !== 0) {
+        return -1;
+    }
+
+    do {
+        sq++;
+    } while (Math.sqrt(sq) % 1 !== 0)
+
+    return sq;
+}
