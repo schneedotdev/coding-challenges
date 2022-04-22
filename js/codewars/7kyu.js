@@ -211,3 +211,17 @@ function findNextSquare(sq) {
  */
 
 const reverseWords = str => str.split(' ').map(word => [...word].reverse().join('')).join(' ');
+
+/**
+ * Name: Odd or Even
+ * Description: given an array of numbers, find out whether the sum of elements is odd or even
+ */
+
+const oddOrEven = array => array.reduce((a, b) => a + b, 0) % 2 == 0 ? 'even' : 'odd'
+
+/**
+ * Name: String ends with?
+ * Description: Check to see whether a string ends with a substring
+ */
+
+const solution = (str, ending) => str.endsWith(ending)

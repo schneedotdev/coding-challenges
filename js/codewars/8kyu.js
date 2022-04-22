@@ -417,3 +417,13 @@ const countSheeps = arrayOfSheep => arrayOfSheep.filter(sheep => sheep).length;
 function binToDec(bin) {
     return bin.split('').reverse().map((num, i) => 2 ** i * num).reduce((a, b) => a + b, 0)
 }
+
+/**
+ * Name: Abbreviate a two word name
+ * Description: Turn a name like Sam Harris into S.H
+ */
+
+const abbrevName = name => {
+    const arr = name.toUpperCase().split(' ');
+    return `${arr[0][0]}.${arr[1][0]}`
+}
