@@ -478,3 +478,62 @@ function countPositivesSumNegatives(input) {
         return a
     }, [0, 0]);
 }
+
+/**
+ * Name: To square(root) or not to square(root)
+ * Description: If the number has an integer square root, take this, otherwise square the number.
+ * 
+ * [4,3,9,7,2,1] -> [2,9,3,49,4,1]
+ */
+
+function squareOrSquareRoot(array) {
+    return array.map(elem => {
+        return Math.sqrt(elem) % 1 === 0 ? Math.sqrt(elem) : elem ** 2
+    })
+}
+
+/**
+ * Name: Square(n) Sum
+ * Description: [1, 2, 2] it should return 9 because 1^2 + 2^2 + 2^2 = 9.
+ */
+
+const squareSum = nums => nums.reduce((a, b) => a += b * b, 0);
+
+/**
+ * Name: Check same case
+ * Description: 
+ * 'a' and 'g' returns 1
+
+'A' and 'C' returns 1
+
+'b' and 'G' returns 0
+
+'B' and 'g' returns 0
+
+'0' and '?' returns -1
+ */
+
+function sameCase(a, b) {
+    console.log(a, b)
+    if (!a.match(/[a-z]/i) || !b.match(/[a-z]/i)) return -1;
+
+    let case1 = a.toUpperCase() === a && b.toUpperCase() === b;
+    let case2 = a.toLowerCase() === a && b.toLowerCase() === b;
+
+    if (case1 || case2)
+        return 1
+
+    return 0;
+}
+
+/**
+ * Name: Fundamentals Return
+ * Description: create a series of functions for basic math operations
+ */
+
+const add = (a, b) => a + b;
+const divide = (a, b) => a / b;
+const multiply = (a, b) => a * b;
+const mod = (a, b) => a % b;
+const exponent = (a, b) => a ** b
+const subt = (a, b) => a - b;
