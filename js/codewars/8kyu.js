@@ -537,3 +537,12 @@ const multiply = (a, b) => a * b;
 const mod = (a, b) => a % b;
 const exponent = (a, b) => a ** b
 const subt = (a, b) => a - b;
+
+/**
+ * Name: String cleaning
+ * Description: Your harried co-workers are looking to you for a solution to take this garbled text and remove all of the numbers. Your program will take in a string and clean out all numeric characters, and return a string with spacing and special characters ~#$%^&!@*():;"'.,? all intact.
+ */
+
+function stringClean(s) {
+    return s.split('').filter(char => isNaN(char) || char === ' ').join('');
+}
