@@ -546,3 +546,10 @@ const subt = (a, b) => a - b;
 function stringClean(s) {
     return s.split('').filter(char => isNaN(char) || char === ' ').join('');
 }
+
+/**
+ * Name: You're a square!
+ * Description: Given an integral number, determine if it's a square number:
+ */
+
+let isSquare = n => Math.sqrt(n) % 1 === 0
