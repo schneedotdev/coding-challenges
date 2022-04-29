@@ -569,3 +569,12 @@ function invert(array) {
  */
 
 const plural = n => n !== 1;
+
+/**
+ * Name: Name Shuffler
+ * Description: return the reverse of a name
+ */
+
+function nameShuffler(str) {
+    return str.split(' ').reverse().join(' ');
+}
