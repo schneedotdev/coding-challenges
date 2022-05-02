@@ -37,3 +37,21 @@ console.log(`Look, a cat! ${snowy.name} barks: ${snowy.bark()}`);
 
 
 // Task: Character Inventory
+class Inventory{
+    constructor() {
+        this.gold = 10;
+        this.keys = 1;
+    }
+    gold() {
+        return this.gold;
+    }
+    addGold(amount) {
+        this.gold += amount;
+    }
+    keys() {
+        return this.keys;
+    }
+    addKeys(amount) {
+        this.keys += amount;
+    }
+}
