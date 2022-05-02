@@ -55,3 +55,16 @@ class Inventory{
         this.keys += amount;
     }
 }
+
+
+// Task: Account List
+class Account {
+    constructor(name, balance, credit) {
+        this.name = name;
+        this.balance = balance;
+        this.credit = credit;
+    }
+    describe() {
+        return `owner: ${this.name}, balance: ${this.balance}`;
+    }
+}
