@@ -1,5 +1,6 @@
 /**
  * TheJSWay Tasks
+ * Chapter 07 - Store Data in Arrays
  */
 
 // Musketeers
