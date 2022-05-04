@@ -596,3 +596,12 @@ function stringy(size) {
 
     return str;
 }
+
+/**
+ * Name: Remove String Spaces
+ * Description: remove the spaces from a string
+ */
+
+function noSpace(x) {
+    return x.split(' ').filter(c => c !== ' ').join('');
+}
