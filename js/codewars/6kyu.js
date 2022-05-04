@@ -107,9 +107,6 @@ function solution(number) {
   return [...new Set(arr)].reduce((a, b) => a + b, 0);
 }
 
-
-
-
 /**
  * Name: Your order, please
  * Description: Your task is to sort a given string. Each word in the string will contain a single number. This number is the position the word should have in the result.
@@ -182,4 +179,22 @@ function duplicateCount(text) {
 
     return encountered;
   }, {})).filter(key => key > 0).length;
+}
+
+/**
+ * Name: Unique In Order
+ * Description: Implement the function unique_in_order which takes as argument a sequence and returns a list of items without any elements with the same value next to each other and preserving the original order of elements.
+ * 
+ * uniqueInOrder('AAAABBBCCDAABBB') == ['A', 'B', 'C', 'D', 'A', 'B']
+ * uniqueInOrder('ABBCcAD')         == ['A', 'B', 'C', 'c', 'A', 'D']
+ * uniqueInOrder([1,2,2,3,3])       == [1,2,3]
+ */
+
+var uniqueInOrder = function (iterable) {
+  let chars = [];
+  for (let i = 0; i < iterable.length; i++) {
+    if (iterable[i] !== iterable[i + 1])
+      chars.push(iterable[i]);
+  }
+  return chars;
 }
