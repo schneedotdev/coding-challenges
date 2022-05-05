@@ -256,3 +256,12 @@ const isIsogram = s => {
 function addBinary(a, b) {
     return (a + b).toString(2)
 }
+
+/**
+ * Name: Javascript Array Filter
+ * Description: filter odd numbers out
+ */
+
+function getEvenNumbers(numbersArray){
+  return numbersArray.filter(num => num % 2 === 0)
+}
