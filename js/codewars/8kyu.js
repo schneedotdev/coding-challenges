@@ -616,3 +616,12 @@ class SmallestIntegerFinder {
     return args.sort((a, b) => a - b)[0]
   }
 }
+
+/**
+ * Name: 
+ * Description:
+ */
+
+function removeEveryOther(arr){
+  return arr.filter((e, i) => i % 2 === 0)
+}
