@@ -265,3 +265,17 @@ function addBinary(a, b) {
 function getEvenNumbers(numbersArray){
   return numbersArray.filter(num => num % 2 === 0)
 }
+
+/**
+ * Name: Vowel Count
+ * Description: 
+ */
+
+function getCount(str) {
+  return str.split('').reduce((a, b) => {
+    if(a.vowels.includes(b))
+      a.count += 1;
+    
+    return a;
+  }, { vowels: ['a', 'e', 'i', 'o', 'u'], count: 0 }).count
+}
