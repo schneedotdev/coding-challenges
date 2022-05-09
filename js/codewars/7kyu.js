@@ -332,3 +332,19 @@ function accum(s) {
                 .join('');
     }).join('-')
 }
+
+/**
+ * Name: Change two-dimensional array
+ * Description: Function receive a two-dimensional square array of random integers. On the main diagonal, all the negative integers must be changed to 0, while the others must be changed to 1 (Note: 0 is considered non-negative, here).
+ */
+
+function matrix(array) {
+  for(let i = 0; i < array.length; i++) {
+    if(array[i][i] < 0)
+      array[i][i] = 0;
+    else
+      array[i][i] = 1;
+  }
+  
+  return array;
+}
