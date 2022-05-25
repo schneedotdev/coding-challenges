@@ -11,7 +11,7 @@
  */
 
 function defineSuit(card) {
-	switch (card[1]) {
+	switch (card[card.length - 1]) {
 		case '♣':
 			return 'clubs';
 		case '♦':
