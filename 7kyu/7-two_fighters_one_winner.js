@@ -6,6 +6,8 @@
  * Each fighter will be a Fighter object/instance. See the Fighter class below in your chosen language.
  *
  * Both health and damagePerAttack (damage_per_attack for python) will be integers larger than 0. You can mutate the Fighter objects.
+ *
+ * Link: https://www.codewars.com/kata/577bd8d4ae2807c64b00045b/train/javascript
  */
 function declareWinner(fighter1, fighter2, firstAttacker) {
 	let first = {};
