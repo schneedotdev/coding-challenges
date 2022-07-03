@@ -5,8 +5,5 @@
  */
 
 const DNAtoRNA = (dna) => {
-	return dna
-		.split('')
-		.map((base) => (base === 'T' ? 'U' : base))
-		.join('');
+	return dna.split('T').join('U');
 };
