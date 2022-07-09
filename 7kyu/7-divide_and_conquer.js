@@ -4,19 +4,4 @@
  * Link: https://www.codewars.com/kata/57eaec5608fed543d6000021/train/javascript
  */
 
-function divCon(x) {
-	const sumObj = x.reduce(
-		(a, c) => {
-			if (typeof c === 'number') {
-				a.nums += c;
-			} else {
-				a.strInts += Number(c);
-			}
-
-			return a;
-		},
-		{ nums: 0, strInts: 0 },
-	);
-
-	return sumObj.nums - sumObj.strInts;
-}
+const divCon = (x) => x.reduce((a, c) => (typeof c === 'number' ? a + c : a - Number(c)), 0);
