@@ -4,4 +4,4 @@
  * Link: https://www.codewars.com/kata/57eaec5608fed543d6000021/train/javascript
  */
 
-const divCon = (x) => x.reduce((a, c) => (typeof c === 'number' ? a + c : a - Number(c)), 0);
+const divCon = (x) => x.reduce((a, c) => typeof c === 'number' ? a + c : a - Number(c), 0);
