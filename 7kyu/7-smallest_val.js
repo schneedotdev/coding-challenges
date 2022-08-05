@@ -4,4 +4,9 @@
  * Link: https://www.codewars.com/kata/544a54fd18b8e06d240005c0/train/javascript
  */
 
-const min = (arr, toReturn) => toReturn === 'value' ? arr.sort((a, b) => a - b)[0] : 0
+function min(arr, toReturn) {
+    const min = Math.min(...arr);
+    
+    if(toReturn === 'value') return min
+    return arr.indexOf(min);
+}
