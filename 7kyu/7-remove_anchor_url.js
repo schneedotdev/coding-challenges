@@ -4,7 +4,4 @@
  * Link: https://www.codewars.com/kata/51f2b4448cadf20ed0000386/train/javascript
  */
 
-function removeUrlAnchor(url){
-  const i = url.indexOf('#');
-  return i > 0 ? url.substring(0, i) : url
-}
+const removeUrlAnchor = url => url.split('#')[0]
