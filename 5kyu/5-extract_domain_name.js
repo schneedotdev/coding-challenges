@@ -19,3 +19,10 @@ function domainName(url) {
 
     return url.splice(0, url.indexOf('.')).join('')
 }
+
+function domainName(url) {
+    url = url.replace("https://", '');
+    url = url.replace("http://", '');
+    url = url.replace("www.", '');
+    return url.split('.')[0];
+};
