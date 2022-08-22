@@ -4,6 +4,6 @@
  * Link: https://www.codewars.com/kata/529eef7a9194e0cbc1000255/train/javascript
  */
 
-const isAnagram = (str1, str2) => {
-    return [...str1.toLowerCase()].sort().join('') === [...str2.toLowerCase()].sort().join('')
-}
+const isAnagram = (str1, str2) => sort(str1) == sort(str2)
+
+const sort = str => [...str.toLowerCase()].sort().join('')
