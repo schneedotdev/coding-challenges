@@ -5,6 +5,8 @@
  */
 
 function XO(str) {
+    if (str === '') return true
+
     let a = str.toLowerCase().match(/x/g)
     let b = str.toLowerCase().match(/o/g)
 
