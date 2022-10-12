@@ -1,5 +1,5 @@
 # LeetCode and Codewars Challenges
-This repo contains my solutions to Codewars problems that I have used to strengthen my JS skills. Every problem is categorized by difficulty where the lower the number "kyu" the harder the problem.
+This repo contains my solutions to LeetCode and Codewars problems that I have used to strengthen my JS skills. Every problem is categorized by difficulty. For Codewars problems, the lower the number "kyu" the harder the problem. For LeetCode, problem difficulty is listed as "easy," "medium," and "hard"
 
 ## Current Rank
 
