@@ -14,3 +14,9 @@ function duplicateEncode(word) {
         return "("
     }).join('')
 }
+
+// function duplicateEncode(word) {
+//     return [...word.toLowerCase()].map((char, i, str) => {
+//         return str.indexOf(char) !== str.lastIndexOf(char) ? ')' : '('
+//     }).join('')
+// }
