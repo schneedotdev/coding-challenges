@@ -5,10 +5,10 @@
  */
 
 function dup(strings) {
-  return strings.map(removeConsecutive)
+  return strings.map(removeConsecutiveChars)
 }
 
-function removeConsecutive(string) {
+function removeConsecutiveChars(string) {
   return [...string]
     .filter((char, i) => char !== string[i - 1])
     .join('')
