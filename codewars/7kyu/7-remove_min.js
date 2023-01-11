@@ -10,3 +10,19 @@ function removeSmallest(numbers) {
   const indexOfMin = numbers.indexOf(min)
   return numbers.filter((num, i) => i !== indexOfMin)
 }
+
+function removeSmallest(numbers) {
+  const copy = numbers.slice()
+  
+  for(let i = 0; i < copy.length; i++) {
+    for(let j = i; j < copy.length; j++) {
+      if (copy[j] < copy[i]) {
+        [copy[i], copy[j]] = [copy[j], copy[i]]
+      }
+    }
+  }
+  
+  const indexOfMin = numbers.indexOf(copy[0])
+  
+  return numbers.filter((num, i) => i !== indexOfMin)
+ }
