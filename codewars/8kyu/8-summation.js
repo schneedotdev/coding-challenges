@@ -9,3 +9,11 @@ const summation = num => {
     return acc + i + 1
   }, 0)
 }
+
+const summation2 = num => {
+  let sum = 0
+  for(let i = 1; i <= num; i++) {
+    sum += i
+  }
+  return sum
+}
