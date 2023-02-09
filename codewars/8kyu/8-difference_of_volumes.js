@@ -12,5 +12,5 @@ function findDifference(a, b) {
     volumeB *= b[i]
   }
   
-  return volumeA - volumeB
+  return Math.abs(volumeA - volumeB)
 }
