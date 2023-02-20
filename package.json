@@ -1,0 +1,24 @@
+{
+  "name": "codewars-problems",
+  "version": "1.0.0",
+  "description": "This repo contains my solutions to LeetCode and Codewars problems that I have used to strengthen my JS skills. Every problem is categorized by difficulty. For Codewars problems, the lower the number \"kyu\" the harder the problem. For LeetCode, problem difficulty is listed as \"easy,\" \"medium,\" and \"hard\"",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brianschnee/codewars-problems.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/brianschnee/codewars-problems/issues"
+  },
+  "homepage": "https://github.com/brianschnee/codewars-problems#readme",
+  "dependencies": {
+    "@types/jest": "^29.4.0",
+    "jest": "^29.4.3"
+  }
+}
