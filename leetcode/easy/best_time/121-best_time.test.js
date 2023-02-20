@@ -5,7 +5,7 @@ describe('maxProfit', () => {
       expect(maxProfit).toBeDefined()
    })
 
-   it('should return 0 if the arguments length is 1', () => {
+   it('should return 0 if their arent enough days to sell', () => {
       expect(maxProfit([1])).toBe(0)
    })
    
