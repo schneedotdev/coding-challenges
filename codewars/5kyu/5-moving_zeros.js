@@ -16,3 +16,9 @@ function moveZeros(arr) {
 
 	return arr.concat(zeros);
 }
+
+function moveZeros2(nums) {
+  const arr = nums.filter((num) => num !== 0)
+  const diff = nums.length - arr.length
+  return arr.concat([...'0'.repeat(diff)].map(Number))
+}
