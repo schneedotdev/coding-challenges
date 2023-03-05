@@ -22,3 +22,14 @@ function moveZeros2(nums) {
   const diff = nums.length - arr.length
   return arr.concat([...'0'.repeat(diff)].map(Number))
 }
+
+function moveZeros3(nums) {
+  const arrays = nums.reduce((arrays, num) => {
+		if(num) arrays.nonZeros.push(num)
+		else arrays.zeros.push(0)
+
+		return arrays
+	}, { nonZeros: [], zeros: [] })
+
+  return arrays.nonZeros.concat(arrays.zeros)
+}
