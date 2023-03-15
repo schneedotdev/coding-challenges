@@ -5,5 +5,5 @@
  */
 
 function sumOfMinimums(arr) {
-  return arr.reduce((sum, cur) => sum + cur.sort()[0], 0)
+  return arr.reduce((sum, cur) => sum + cur.sort((a, b) => a - b)[0], 0)
 }
