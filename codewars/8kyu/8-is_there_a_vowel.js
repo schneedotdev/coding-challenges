@@ -8,6 +8,6 @@ function isVow(values) {
 	return values.map((value) => {
 		const char = String.fromCharCode(value);
 
-		'aeiou'.includes(char) ? char : value;
+		return 'aeiou'.includes(char) ? char : value;
 	});
 }
