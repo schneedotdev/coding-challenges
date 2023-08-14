@@ -5,23 +5,22 @@
  */
 
 function longestConsecutive(nums: number[]): number {
-    if (!nums.length) return 0;
-    if (nums.length == 1) return 1;
+	if (nums.length < 2) return nums.length;
 
-    nums = [...new Set(nums.sort((a, b) => a - b))];
+	nums = [...new Set(nums.sort((a, b) => a - b))];
 
-    let longest, temp;
-    for (let i = longest = temp = 1; i < nums.length; i++) {
-        if ((nums[i] - 1) === nums[i - 1]) {
-            temp++;
+	let longest, temp;
+	for (let i = (longest = temp = 1); i < nums.length; i++) {
+		if (nums[i] - 1 === nums[i - 1]) {
+			temp++;
 
-            if (temp > longest) {
-                longest = temp;
-            }
-        } else {
-            temp = 1;
-        }
-    }
+			if (temp > longest) {
+				longest = temp;
+			}
+		} else {
+			temp = 1;
+		}
+	}
 
-    return longest;
-};
+	return longest;
+}
