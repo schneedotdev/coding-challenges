@@ -7,11 +7,11 @@
 function longestConsecutive(nums: number[]): number {
 	if (nums.length < 2) return nums.length;
 
-	nums = [...new Set(nums.sort((a, b) => a - b))];
+	const set = [...new Set(nums.sort((a, b) => a - b))];
 
 	let longest, temp;
-	for (let i = (longest = temp = 1); i < nums.length; i++) {
-		if (nums[i] - 1 === nums[i - 1]) {
+	for (let i = (longest = temp = 1); i < set.length; i++) {
+		if (set[i] - 1 === set[i - 1]) {
 			temp++;
 
 			if (temp > longest) {
